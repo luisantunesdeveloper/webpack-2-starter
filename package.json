@@ -5,5 +5,12 @@
   "main": "index.js",
   "repository": "git@github.com:luisantunesdeveloper/webpack-2-starter.git",
   "author": "Luís Antunes",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "webpack": "webpack -p --config ./tools/config/webpack.config.js --display-error-details"
+  },
+  "devDependencies": {
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "2.1.0-beta.10"
+  }
 }
