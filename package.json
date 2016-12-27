@@ -1,0 +1,9 @@
+{
+  "name": "webpack-2-starter",
+  "version": "0.0.1",
+  "description": "tired of boilerplates",
+  "main": "index.js",
+  "repository": "git@github.com:luisantunesdeveloper/webpack-2-starter.git",
+  "author": "Luís Antunes",
+  "license": "MIT"
+}
