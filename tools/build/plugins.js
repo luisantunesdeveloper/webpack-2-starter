@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const paths = require('./paths');
 const path = require('path');
 const HtmlWebpack = require('html-webpack-plugin');
+const _ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // This makes it possible for us to safely use env vars on our code
 const DefinePlugin = new webpack.DefinePlugin({
@@ -23,8 +24,11 @@ const HtmlWebpackPlugin = new HtmlWebpack({
     inject: 'body' // inject at the bottom of the body tag
 });
 
+const ExtractTextPlugin = new _ExtractTextPlugin('[name].bundle.css');
+
 module.exports = {
     DefinePlugin: DefinePlugin,
     UglifyJsPlugin: UglifyJsPlugin,
-    HtmlWebpackPlugin: HtmlWebpackPlugin
+    HtmlWebpackPlugin: HtmlWebpackPlugin,
+    ExtractTextPlugin: ExtractTextPlugin
 }

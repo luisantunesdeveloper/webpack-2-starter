@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const paths = require('./paths');
 const plugins = require('./plugins');
+const loaders = require('./loaders');
 
 // TODO: see if DefinePlugin cannot be handy here
 module.exports = env => {
@@ -25,14 +26,8 @@ module.exports = env => {
         ],
         module: {
             loaders: [
-                {
-                    test: /\.(js)$/,
-                    exclude: /node_modules/,
-                    loader: 'babel',
-                    query: {
-                        cacheDirectory: true
-                    }
-                }
+                loaders.BabelLoader,
+                loaders.CSSLoader
             ]
         }
     };
